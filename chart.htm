@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script TYPE="text/javascript" src="scripts/chartlib.js"></script>
+  <!-- <script TYPE="text/javascript" SRC="scripts/chart.js"></SCRIPT> -->
+  <title>My Chart.js Chart</title>
+  <style type="text/css">
+      .chartBox{
+        width: 650px; 
+      }
+  </style>
+</head>
+
+<body>
+    <div class="chartBox">
+        <canvas id="myChart"></canvas>
+    </div>  
+
+    <A HREF="javascript:void;" onclick="drawDailyChart()">
+        <DIV class="button">
+            <IMG ALT="">
+            Showing your Daily Chart
+        </DIV>
+    </A>
+
+    <A HREF="javascript:void;" onclick="drawWeeklyChart()">
+        <DIV class="button">
+            <IMG ALT="">
+            Showing your Weekly Chart
+        </DIV>
+    </A>
+
+
+    <A HREF="javascript:void;" onclick="drawMonthlyChart()">
+        <DIV class="button">
+            <IMG  ALT="">
+            Showing your Monthly Chart
+        </DIV>
+    </A>
+
+
+<script>
+
+// -----------------------------        DAILY      ------------------------------------    
+        function drawDailyChart(){
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                    'Monday',
+                    'Tuesday',
+                    'Wednesday',
+                    'Thursday',
+                    'Friday',
+                    'Saturday',
+                    'Sunday'
+                    ],
+                datasets: [{
+                    label: 'Your daily Expenditure',
+                    data: [10, 8, 15, 12, 16, 14, 20],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(54, 162, 235, 0.5)',                
+                    ],
+                    borderColor:[
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(54, 162, 235, 0.5)',
+                    ],
+                    hoverOffset: 2,
+                    borderWidth: 1.5,
+                }]
+        },
+            options: {
+                scales:{
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+    
+
+    });   
+}        
+
+// -----------------------------        WEEKLY       ------------------------------------
+
+function drawWeeklyChart(){
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                    'Week1',
+                    'Week2',
+                    'Week3',
+                    'Week4',
+                    'Week5',
+                    'Week6',
+                    'Week7'
+                    ],
+                datasets: [{
+                    label: 'Your Weekly Expenditure',
+                    data: [100, 75, 97, 110, 85, 105, 120],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(54, 162, 235, 0.5)',                
+                    ],
+                    borderColor:[
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(54, 162, 235, 0.5)',
+                    ],
+                    hoverOffset: 2,
+                    borderWidth: 1.5,
+                }]
+        },
+            options: {
+                scales:{
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+    
+
+    });   
+}
+
+// -----------------------------        MONTHLY       ------------------------------------
+
+function drawMonthlyChart(){
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                    'January',
+                    'Febrauary',
+                    'March',
+                    'April',
+                    'May',
+                    'June',
+                    'July',
+                    'August',
+                    'September',
+                    'October',
+                    'November',
+                    'December'
+                    ],
+                datasets: [{
+                    label: 'Your Monthly Expenditure',
+                    data: [420, 456, 473, 485, 468, 452, 490],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(54, 162, 235, 0.5)',                
+                    ],
+                    borderColor:[
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(54, 162, 235, 0.5)',
+                    ],
+                    hoverOffset: 2,
+                    borderWidth: 1.5,
+                }]
+        },
+            options: {
+                scales:{
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+    
+
+    });   
+}
+
+
+</script>
+
+</body>
+</html>
